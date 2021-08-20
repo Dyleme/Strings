@@ -1,4 +1,4 @@
-package task1
+package reverseString
 
 import (
 	"strings"
@@ -9,6 +9,7 @@ func ReverseString(str string) string {
 	var sb strings.Builder
 	b := []byte(str)
 	length := len(str)
+	sb.Grow(length)
 	composeWidth := 0
 	for composeWidth < length {
 		r, width := utf8.DecodeLastRune(b[:length-composeWidth])
