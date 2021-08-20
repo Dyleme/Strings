@@ -1,4 +1,4 @@
-package reverseString
+package reversestring
 
 import (
 	"testing"
@@ -11,8 +11,11 @@ func TestReverseString(t *testing.T) {
 	t.Run("日本語", testReverseStringFunc("日本語", "語本日"))
 }
 
-func testReverseStringFunc(str string, expexted string) func(t *testing.T) {
+func testReverseStringFunc(str, expexted string) func(t *testing.T) {
 	return func(t *testing.T) {
+		t.Helper()
+		t.Parallel()
+
 		if got := ReverseString(str); got != expexted {
 			t.Errorf("Reverse string = %s, want %s", got, expexted)
 		}
