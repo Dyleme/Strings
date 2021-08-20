@@ -1,3 +1,3 @@
-module reverseString
+module strings
 
 go 1.16
