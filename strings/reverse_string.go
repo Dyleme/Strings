@@ -13,15 +13,13 @@ func ReverseString(str string) string {
 
 	sb.Grow(len(str))
 
-	b := []byte(str)
-	length := len(str)
-	composeWidth := 0
+	lengthToProcess := len(str)
 
-	for composeWidth < length {
-		r, width := utf8.DecodeLastRune(b[:length-composeWidth])
+	for lengthToProcess > 0 {
+		r, width := utf8.DecodeLastRuneInString(str[:lengthToProcess])
 		sb.WriteRune(r)
 
-		composeWidth += width
+		lengthToProcess -= width
 	}
 
 	return sb.String()
