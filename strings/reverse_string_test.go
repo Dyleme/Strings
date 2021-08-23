@@ -1,6 +1,7 @@
 package strings_test
 
 import (
+	"fmt"
 	"github.com/Dyleme/Strings/strings"
 	"testing"
 )
@@ -22,4 +23,12 @@ func testReverseStringFunc(str, expexted string) func(t *testing.T) {
 			t.Errorf("Reverse string = %s, want %s", got, expexted)
 		}
 	}
+}
+
+
+func ExampleReverseString() {
+	var str string = "Nice weather today"
+	fmt.Println(strings.ReverseString(str))
+
+	// Output:yadot rehtaew eciN
 }
