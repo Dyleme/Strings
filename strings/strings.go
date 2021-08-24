@@ -23,3 +23,9 @@ func ReverseString(str string) string {
 
 	return sb.String()
 }
+
+// StringLength returns length of string
+// Can be used for UTF-8 string
+func StringLength(str string) int {
+	return utf8.RuneCountInString(str)
+}
