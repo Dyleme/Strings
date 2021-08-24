@@ -2,8 +2,9 @@ package strings_test
 
 import (
 	"fmt"
-	"github.com/Dyleme/Strings/strings"
 	"testing"
+
+	"github.com/Dyleme/Strings/strings"
 )
 
 func TestReverseString(t *testing.T) {
@@ -24,7 +25,6 @@ func testReverseStringFunc(str, expexted string) func(t *testing.T) {
 		}
 	}
 }
-
 
 func ExampleReverseString() {
 	var str = "Nice weather today"

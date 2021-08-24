@@ -30,8 +30,8 @@ linters:
     - exhaustive
     - goconst
     - gocritic
-    # - gofmt
-    # - goimports
+    - gofmt
+    - goimports
     - gomnd
     - gocyclo
     - gosec
