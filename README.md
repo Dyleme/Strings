@@ -14,7 +14,7 @@ revStr := ReverseString(str)
 //revStr == "字汉"
 ```
 
-#StringLength(str string) int 
+# StringLength(str string) int 
 ```go
 str := "Hello" 
 length := StringLength(str)
