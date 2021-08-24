@@ -27,7 +27,8 @@ func testReverseStringFunc(str, expexted string) func(t *testing.T) {
 
 
 func ExampleReverseString() {
-	var str string = "Nice weather today"
+	var str = "Nice weather today"
+
 	fmt.Println(strings.ReverseString(str))
 
 	// Output:yadot rehtaew eciN

@@ -33,7 +33,8 @@ func TestStringLength(t *testing.T) {
 
 
 func ExampleStringLength() {
-	var str string = "Nice weather today"
+	var str = "Nice weather today"
+
 	fmt.Println(strings.StringLength(str))
 
 	// Output: 18
