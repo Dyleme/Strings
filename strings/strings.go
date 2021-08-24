@@ -1,4 +1,4 @@
-// Package contain function that can reverse string
+// Package strings contain function that can return length of string and revert string
 package strings
 
 import (
@@ -6,8 +6,7 @@ import (
 	"unicode/utf8"
 )
 
-// Reverse provided string, can be used for UTF8 characters.
-// Return reversed string
+// ReverseString reverse provided string, can be used for UTF8 characters.
 func ReverseString(str string) string {
 	var sb strings.Builder
 
@@ -23,4 +22,10 @@ func ReverseString(str string) string {
 	}
 
 	return sb.String()
+}
+
+// StringLength returns length of string
+// Can be used for UTF-8 string
+func StringLength(str string) int {
+	return utf8.RuneCountInString(str)
 }
